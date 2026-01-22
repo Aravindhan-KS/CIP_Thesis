@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.20)  22 JAN 2026 13:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.20)  22 JAN 2026 17:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -641,21 +641,24 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-) [4
 
-] (./bethesis.lof) [5
+Underfull \hbox (badness 1122) in paragraph at lines 12--12
+ [][] []\OT1/ptm/m/n/14.4 Design: Quantum-Inspired Fea-ture Map-ping 
+ []
 
-] (./bethesis.lot) [6
+[4
 
-]
-(./FrontMatter/acronyms.tex) [7
+]) [5] (./bethesis.lof) [6
+
+] (./bethesis.lot) [7
+
+] (./FrontMatter/acronyms.tex) [8
 
 
 ] (./Chapters/Chapter1.tex [1
 
 
-])
-(./Chapters/Chapter2.tex [2]
+]) (./Chapters/Chapter2.tex [2]
 Overfull \hbox (6.44075pt too wide) in paragraph at lines 19--19
 []|\OT1/ptm/b/n/14.4 S.No|  
  []
@@ -692,24 +695,15 @@ Overfull \hbox (77.19125pt too wide) in alignment at lines 32--80
 
 [3
 
-] [4] [5]) (./Chapters/Chapter3.tex [6]
+] [4] [5]) (./Chapters/Chapter3.tex [6] [7
+
+] [8] [9] [10])
+(./Chapters/Chapter4.tex [11]
 
 Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
 (lipsum)                'english' will be used instead.
 
-<Figures/bg.pdf, id=53, 682.55pt x 682.55pt>
-File: Figures/bg.pdf Graphic file (type pdf)
-<use Figures/bg.pdf>
-Package pdftex.def Info: Figures/bg.pdf  used on input line 9.
-(pdftex.def)             Requested size: 426.801pt x 341.4408pt.
 
-Overfull \hbox (14.801pt too wide) in paragraph at lines 9--10
- [][] 
- []
-
-[7
-
-] [8 <./Figures/bg.pdf>] [9]) (./Chapters/Chapter4.tex [10]
 Underfull \hbox (badness 7740) in paragraph at lines 14--16
 []|\OT1/ptm/m/n/14.4 Cloudy with rain, across
  []
@@ -724,46 +718,46 @@ Underfull \hbox (badness 1005) in paragraph at lines 17--20
 \OT1/ptm/m/n/14.4 im-prove by early af-ter-noon
  []
 
-[11
+[12
 
-] [12]) (./Chapters/Chapter5.tex [13]
+] [13]) (./Chapters/Chapter5.tex [14]
 
-LaTeX Warning: Citation `bach1986design' on page 14 undefined on input line 5.
+LaTeX Warning: Citation `bach1986design' on page 15 undefined on input line 5.
 
 
-LaTeX Warning: Citation `kernighan1983unix' on page 14 undefined on input line 
+LaTeX Warning: Citation `kernighan1983unix' on page 15 undefined on input line 
 6.
 
 
-LaTeX Warning: Citation `ritchie1974unix' on page 14 undefined on input line 7.
+LaTeX Warning: Citation `ritchie1974unix' on page 15 undefined on input line 7.
 
 
 
-LaTeX Warning: Citation `ho2001future' on page 14 undefined on input line 8.
+LaTeX Warning: Citation `ho2001future' on page 15 undefined on input line 8.
 
 
-LaTeX Warning: Citation `hauck1998configuration' on page 14 undefined on input 
+LaTeX Warning: Citation `hauck1998configuration' on page 15 undefined on input 
 line 9.
 
 
-LaTeX Warning: Citation `stahlberg2007threats' on page 14 undefined on input li
+LaTeX Warning: Citation `stahlberg2007threats' on page 15 undefined on input li
 ne 10.
 
 
-LaTeX Warning: Citation `torvalds2002linux' on page 14 undefined on input line 
+LaTeX Warning: Citation `torvalds2002linux' on page 15 undefined on input line 
 11.
 
 
-LaTeX Warning: Citation `buchholz2006structure' on page 14 undefined on input l
+LaTeX Warning: Citation `buchholz2006structure' on page 15 undefined on input l
 ine 12.
 
 
-LaTeX Warning: Citation `gud2007chunkfs' on page 14 undefined on input line 12.
+LaTeX Warning: Citation `gud2007chunkfs' on page 15 undefined on input line 12.
 
 
-) (./Chapters/Chapter6.tex [14
+) (./Chapters/Chapter6.tex [15
 
-] [15] [16
+] [16] [17
 
 ]
 Underfull \hbox (badness 7740) in paragraph at lines 18--20
@@ -780,9 +774,9 @@ Underfull \hbox (badness 1005) in paragraph at lines 21--24
 \OT1/ptm/m/n/14.4 im-prove by early af-ter-noon
  []
 
-) (./Chapters/Chapter7.tex [17] [18] [19
+) (./Chapters/Chapter7.tex [18] [19] [20
 
-] [20]) [21]
+] [21]) [22]
 No file bethesis.bbl.
 \tf@toc=\write4
 \openout4 = `bethesis.toc'.
@@ -804,20 +798,20 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7996 strings out of 476182
- 126903 string characters out of 5795595
+ 7983 strings out of 476182
+ 126632 string characters out of 5795595
  1943975 words of memory out of 5000000
- 29860 multiletter control sequences out of 15000+600000
+ 29847 multiletter control sequences out of 15000+600000
  582800 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  85i,11n,93p,1611b,310s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bethesis.pdf (29 pages, 166325 bytes).
+Output written on bethesis.pdf (31 pages, 96587 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 123 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,19 +1,26 @@
 \contentsline {chapter}{ABSTRACT -- ENGLISH}{iii}{}%
-\contentsline {chapter}{LIST OF FIGURES}{v}{}%
-\contentsline {chapter}{LIST OF TABLES}{vi}{}%
-\contentsline {chapter}{LIST OF ABBREVIATIONS}{vii}{}%
+\contentsline {chapter}{LIST OF FIGURES}{vi}{}%
+\contentsline {chapter}{LIST OF TABLES}{vii}{}%
+\contentsline {chapter}{LIST OF ABBREVIATIONS}{viii}{}%
 \contentsline {chapter}{\chapternumberline {1}INTRODUCTION}{1}{}%
 \contentsline {chapter}{\chapternumberline {2}LITERATURE REVIEW}{3}{}%
 \contentsline {chapter}{\chapternumberline {3}DESIGN}{7}{}%
-\contentsline {section}{\numberline {3.1}Requirements}{7}{}%
-\contentsline {subsection}{\numberline {3.1.1}And analysis}{10}{}%
-\contentsline {chapter}{\chapternumberline {4}IMPLEMENTATION}{11}{}%
-\contentsline {section}{\numberline {4.1}Design Principles}{11}{}%
-\contentsline {chapter}{\chapternumberline {5}TESTING}{14}{}%
-\contentsline {chapter}{\chapternumberline {6}RESULTS}{16}{}%
-\contentsline {section}{\numberline {6.1}Results}{16}{}%
-\contentsline {subsection}{\numberline {6.1.1}Assessment}{16}{}%
-\contentsline {subsection}{\numberline {6.1.2}Evaluation}{17}{}%
-\contentsline {chapter}{\chapternumberline {7}CONCLUSIONS}{19}{}%
-\contentsline {section}{\numberline {7.1}Contributions}{19}{}%
-\contentsline {section}{\numberline {7.2}Future Work}{20}{}%
+\contentsline {section}{\numberline {3.1}Design Overview}{7}{}%
+\contentsline {section}{\numberline {3.2}System Overview}{8}{}%
+\contentsline {subsection}{\numberline {3.2.1}Design: Data Acquisition Module}{8}{}%
+\contentsline {subsection}{\numberline {3.2.2}Design: Data Preprocessing Module}{9}{}%
+\contentsline {subsection}{\numberline {3.2.3}Design: Classical Feature Engineering Module}{9}{}%
+\contentsline {subsection}{\numberline {3.2.4}Design: Quantum-Inspired Feature Mapping Module}{10}{}%
+\contentsline {subsection}{\numberline {3.2.5}Design: Hybrid QSVM Classification Module}{10}{}%
+\contentsline {subsection}{\numberline {3.2.6}Design: Risk Assessment and Outputs}{11}{}%
+\contentsline {subsection}{\numberline {3.2.7}Design Summary}{11}{}%
+\contentsline {chapter}{\chapternumberline {4}IMPLEMENTATION}{12}{}%
+\contentsline {section}{\numberline {4.1}Design Principles}{12}{}%
+\contentsline {chapter}{\chapternumberline {5}TESTING}{15}{}%
+\contentsline {chapter}{\chapternumberline {6}RESULTS}{17}{}%
+\contentsline {section}{\numberline {6.1}Results}{17}{}%
+\contentsline {subsection}{\numberline {6.1.1}Assessment}{17}{}%
+\contentsline {subsection}{\numberline {6.1.2}Evaluation}{18}{}%
+\contentsline {chapter}{\chapternumberline {7}CONCLUSIONS}{20}{}%
+\contentsline {section}{\numberline {7.1}Contributions}{20}{}%
+\contentsline {section}{\numberline {7.2}Future Work}{21}{}%
