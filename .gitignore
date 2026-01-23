@@ -1,0 +1,45 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.nav
+*.snm
+*.vrb
+*.idx
+*.ilg
+*.ind
+*.glo
+*.gls
+*.glg
+*.acn
+*.acr
+*.alg
+*.ist
+
+# Backup files
+*.tex~
+*.bak
+*~
+
+# Windows Zone.Identifier files
+*Zone.Identifier
+
+# Generated PDF (uncomment if you want to track the final PDF)
+# *.pdf
+
+# Editor files
+*.swp
+*.swo
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

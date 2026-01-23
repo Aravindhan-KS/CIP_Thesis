@@ -2,25 +2,39 @@
 
 \chapter{IMPLEMENTATION} % All Chapter headings in ALL CAPS
 
-\section{Design Principles}
-\lipsum[1-2]
-\begin{table}
-\centering
-    \begin{tabular}{ | l | l | l | p{6cm} |}
-    \hline
-    Day & Min Temp & Max Temp & Summary \\ \hline
-    Monday & 11C & 22C & A clear day with lots of sunshine.  
-    However, the strong breeze will bring down the temperatures. \\ \hline
-    Tuesday & 9C & 19C & Cloudy with rain, across many northern regions. Clear spells
-    across most of Scotland and Northern Ireland,
-    but rain reaching the far northwest. \\ \hline
-    Wednesday & 10C & 21C & Rain will still linger for the morning.
-    Conditions will improve by early afternoon and continue
-    throughout the evening. \\
-    \hline
-    \end{tabular}
-\caption{Pointless Table}
-\label{PT}
-\end{table}
-\lipsum[1-2]
+\section{Accuracy}
+\paragraph{\textbf{Accuracy}}
+measures the proportion of correctly classified samples among all test instances.
+\begin{equation}
+\mathrm{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+\end{equation}
+where TP, TN, FP, and FN denote true positives, true negatives, false positives, and false negatives, respectively. 
+
+\section{Recall}
+\textbf{Recall}
+refers to evaluating the model’s skill to accurately classify real anomalous examples
+\begin{equation}
+\mathrm{Recall} = \frac{TP}{TP + FN}
+\end{equation}
+
+High recall is critical when it comes to safety monitoring for EV battery packs, as a lack of recognition of an anomaly can cause serious problems.
+
+\section{Feature Space Seperability}
+\textbf{Feature Space Seperability(FSS)}
+This refers to the separability in the feature space that results after the quantum-inspired processing step
+\begin{equation}
+\mathrm{FSS} =
+\frac{\| \mu_{\mathrm{normal}} - \mu_{\mathrm{anomaly}} \|_{2}}
+{\sigma_{\mathrm{normal}} + \sigma_{\mathrm{anomaly}}}
+\end{equation}
+
+A larger FSS value means better class separability achieved by the quantum support feature transformation process.
+
+\section{Variance Amplification Ratio}
+\textbf{Variance Amplification Ratio(VAR)}
+measures the amount of variance in features that is increased by the quantum-inspired transformation.
+\begin{equation}
+\mathrm{VAR} = \frac{\mathrm{Var}\!\left(Q(x)\right)}{\mathrm{Var}(x)}
+\end{equation}
+Q(x) means the quantum-transformed feature vector.
 
