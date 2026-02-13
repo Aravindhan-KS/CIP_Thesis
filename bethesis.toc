@@ -4,22 +4,22 @@
 \contentsline {chapter}{LIST OF ABBREVIATIONS}{viii}{}%
 \contentsline {chapter}{\chapternumberline {1}INTRODUCTION}{1}{}%
 \contentsline {chapter}{\chapternumberline {2}LITERATURE REVIEW}{3}{}%
-\contentsline {chapter}{\chapternumberline {3}DESIGN}{7}{}%
-\contentsline {section}{\numberline {3.1}Design Overview}{7}{}%
-\contentsline {section}{\numberline {3.2}System Overview}{8}{}%
-\contentsline {subsection}{\numberline {3.2.1}Design: Data Acquisition Module}{9}{}%
-\contentsline {subsection}{\numberline {3.2.2}Design: Data Preprocessing Module}{9}{}%
-\contentsline {subsection}{\numberline {3.2.3}Design: Classical Feature Engineering Module}{9}{}%
-\contentsline {subsection}{\numberline {3.2.4}Design: Quantum-Inspired Feature Mapping Module}{10}{}%
-\contentsline {subsection}{\numberline {3.2.5}Design: Hybrid QSVM Classification Module}{11}{}%
-\contentsline {subsection}{\numberline {3.2.6}Design: Risk Assessment and Outputs}{11}{}%
-\contentsline {subsection}{\numberline {3.2.7}Design Summary}{11}{}%
-\contentsline {chapter}{\chapternumberline {4}PERFORMANCE METRICS}{13}{}%
-\contentsline {section}{\numberline {4.1}Accuracy}{13}{}%
-\contentsline {paragraph}{\textbf {Accuracy}}{13}{}%
-\contentsline {section}{\numberline {4.2}Recall}{13}{}%
-\contentsline {section}{\numberline {4.3}Feature Space Seperability}{13}{}%
-\contentsline {section}{\numberline {4.4}Variance Amplification Ratio}{14}{}%
-\contentsline {chapter}{\chapternumberline {5}TESTING}{15}{}%
-\contentsline {section}{\numberline {5.1}Visualization of Key Feature Distributions}{15}{}%
-\contentsline {chapter}{\chapternumberline {6}CONCLUSIONS}{17}{}%
+\contentsline {chapter}{\chapternumberline {3}DESIGN}{6}{}%
+\contentsline {section}{\numberline {3.1}Design Overview}{6}{}%
+\contentsline {section}{\numberline {3.2}System Overview}{7}{}%
+\contentsline {subsection}{\numberline {3.2.1}Design: Data Acquisition Module}{7}{}%
+\contentsline {subsection}{\numberline {3.2.2}Design: Data Preprocessing Module}{8}{}%
+\contentsline {subsection}{\numberline {3.2.3}Design: Classical Feature Engineering Module}{8}{}%
+\contentsline {subsection}{\numberline {3.2.4}Design: Quantum-Inspired Feature Mapping Module}{9}{}%
+\contentsline {subsection}{\numberline {3.2.5}Design: Hybrid QSVM Classification Module}{9}{}%
+\contentsline {subsection}{\numberline {3.2.6}Design: Risk Assessment and Outputs}{10}{}%
+\contentsline {subsection}{\numberline {3.2.7}Design Summary}{10}{}%
+\contentsline {chapter}{\chapternumberline {4}PERFORMANCE METRICS}{12}{}%
+\contentsline {section}{\numberline {4.1}Accuracy}{12}{}%
+\contentsline {paragraph}{\textbf {Accuracy}}{12}{}%
+\contentsline {section}{\numberline {4.2}Recall}{12}{}%
+\contentsline {section}{\numberline {4.3}Feature Space Separability}{12}{}%
+\contentsline {section}{\numberline {4.4}Variance Amplification Ratio}{13}{}%
+\contentsline {chapter}{\chapternumberline {5}TESTING}{14}{}%
+\contentsline {section}{\numberline {5.1}Visualization of Key Feature Distributions}{14}{}%
+\contentsline {chapter}{\chapternumberline {6}CONCLUSIONS}{16}{}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.20)  23 JAN 2026 03:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.20)  13 FEB 2026 09:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -659,59 +659,829 @@ Underfull \hbox (badness 1122) in paragraph at lines 13--13
 
 
 ]) (./Chapters/Chapter2.tex [2]
-Overfull \hbox (6.44075pt too wide) in paragraph at lines 19--19
-[]|\OT1/ptm/b/n/14.4 S.No|  
+Overfull \hbox (58.64226pt too wide) in alignment at lines 9--17
+ [] [] [] [] [] 
  []
 
 
-Overfull \hbox (77.19125pt too wide) in alignment at lines 14--21
-[] [] [] [] []
+Overfull \hbox (58.64226pt too wide) in alignment at lines 17--22
+ [] [] [] [] [] 
  []
 
 
-Overfull \hbox (6.44075pt too wide) in paragraph at lines 24--24
-[]|\OT1/ptm/b/n/14.4 S.No|  
+Overfull \hbox (58.64226pt too wide) in alignment at lines 22--25
+ [] [] [] [] [] 
  []
 
 
-Overfull \hbox (77.19125pt too wide) in alignment at lines 21--26
-[] [] [] [] []
+Overfull \hbox (58.64226pt too wide) in alignment at lines 25--28
+ [] [] [] [] [] 
  []
 
 
-Overfull \hbox (77.19125pt too wide) in alignment at lines 26--29
-[] [] [] [] []
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\OT1/ptm/m/n/14.4 Comparative
  []
 
 
-Overfull \hbox (77.19125pt too wide) in alignment at lines 29--32
-[] [] [] [] []
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/ptm/m/n/14.4 In-ves-ti-ga-tion
  []
 
 
-Overfull \hbox (77.19125pt too wide) in alignment at lines 32--80
-[] [] [] [] []
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/ptm/m/n/14.4 of Quan-tum
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/ptm/m/n/14.4 and Clas-si-cal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/ptm/m/n/14.4 Ker-nel Func-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/ptm/m/n/14.4 tions Ap-plied
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/ptm/m/n/14.4 tor Ma-chine
+ []
+
+
+Underfull \hbox (badness 1715) in paragraph at lines 32--32
+[]|\OT1/ptm/m/n/14.4 Performs a com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\OT1/ptm/m/n/14.4 par-a-tive study
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\OT1/ptm/m/n/14.4 of clas-si-cal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\OT1/ptm/m/n/14.4 ker-nels (RBF,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\OT1/ptm/m/n/14.4 poly-no-mial) and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\OT1/ptm/m/n/14.4 quan-tum ker-nels
+ []
+
+
+Underfull \hbox (badness 3623) in paragraph at lines 32--32
+\OT1/ptm/m/n/14.4 within the SVM
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\OT1/ptm/m/n/14.4 fer-ent quan-tum
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\OT1/ptm/m/n/14.4 fea-ture maps
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\OT1/ptm/m/n/14.4 are eval-u-ated
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\OT1/ptm/m/n/14.4 us-ing QSVM
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\OT1/ptm/m/n/14.4 on bench-mark
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT1/ptm/m/n/14.4 sim-u-la-tors;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT1/ptm/m/n/14.4 high ker-nel
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT1/ptm/m/n/14.4 com-pu-ta-tion
+ []
+
+
+Underfull \hbox (badness 3679) in paragraph at lines 33--33
+\OT1/ptm/m/n/14.4 cost; lim-ited
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT1/ptm/m/n/14.4 scal-a-bil-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT1/ptm/m/n/14.4 ity; lacks
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT1/ptm/m/n/14.4 real-world
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT1/ptm/m/n/14.4 ap-pli-ca-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+\OT1/ptm/m/n/14.4 tum ker-nel
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+\OT1/ptm/m/n/14.4 com-par-i-son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+\OT1/ptm/m/n/14.4 frame-work to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+\OT1/ptm/m/n/14.4 eval-u-ate clas-si-
+ []
+
+
+Underfull \hbox (badness 1603) in paragraph at lines 34--35
+\OT1/ptm/m/n/14.4 QSVM for bat-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+\OT1/ptm/m/n/14.4 tery time-series
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+\OT1/ptm/m/n/14.4 fea-tures, jus-ti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+\OT1/ptm/m/n/14.4 fy-ing im-proved
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+\OT1/ptm/m/n/14.4 sep-a-ra-bil-ity for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+\OT1/ptm/m/n/14.4 early dendrite-
+ []
+
+
+Underfull \hbox (badness 3471) in paragraph at lines 39--39
+[]|\OT1/ptm/m/n/14.4 Assessment of
+ []
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 39--39
+\OT1/ptm/m/n/14.4 Quan-tum Fea-
+ []
+
+
+Underfull \hbox (badness 7064) in paragraph at lines 39--39
+\OT1/ptm/m/n/14.4 ture Map for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\OT1/ptm/m/n/14.4 Bi-nary For-est
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\OT1/ptm/m/n/14.4 Clas-si-fi-ca-tion
+ []
+
+
+Underfull \hbox (badness 1077) in paragraph at lines 40--40
+\OT1/ptm/m/n/14.4 for bi-nary clas-si-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/ptm/m/n/14.4 are nor-mal-ized,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/ptm/m/n/14.4 and clas-si-fied
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/ptm/m/n/14.4 us-ing QSVM
+ []
+
+
+Underfull \hbox (badness 6188) in paragraph at lines 40--40
+\OT1/ptm/m/n/14.4 with Pareto-front
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\OT1/ptm/m/n/14.4 Relies on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/ptm/m/n/14.4 sim-u-la-tors;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/ptm/m/n/14.4 in-con-sis-tent
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/ptm/m/n/14.4 QSVM su-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/ptm/m/n/14.4 pe-ri-or-ity;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/ptm/m/n/14.4 scal-a-bil-ity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/ptm/m/n/14.4 lim-i-ta-tions
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/ptm/m/n/14.4 in NISQ-era
+ []
+
+
+Underfull \hbox (badness 6944) in paragraph at lines 42--43
+[]|\OT1/ptm/m/n/14.4 Apply quan-tum
+ []
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 42--43
+\OT1/ptm/m/n/14.4 fea-ture map se-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+\OT1/ptm/m/n/14.4 data and use
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+\OT1/ptm/m/n/14.4 Pareto anal-y-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+\OT1/ptm/m/n/14.4 sis to bal-ance
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+\OT1/ptm/m/n/14.4 ac-cu-racy and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+\OT1/ptm/m/n/14.4 com-pu-ta-tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+[]|\OT1/ptm/m/n/14.4 Hybrid Quan-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+\OT1/ptm/m/n/14.4 tum{Classical
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+\OT1/ptm/m/n/14.4 Frame-work
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+\OT1/ptm/m/n/14.4 for Ur-ban
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+\OT1/ptm/m/n/14.4 Traf-fic State
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]|\OT1/ptm/m/n/14.4 Implements a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+\OT1/ptm/m/n/14.4 hy-brid pipeline
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+\OT1/ptm/m/n/14.4 com-bin-ing clas-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+\OT1/ptm/m/n/14.4 si-cal fea-ture
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+\OT1/ptm/m/n/14.4 ex-trac-tion with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+[]|\OT1/ptm/m/n/14.4 Limited
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+\OT1/ptm/m/n/14.4 dataset;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+\OT1/ptm/m/n/14.4 simulator-
+ []
+
+
+Underfull \hbox (badness 5203) in paragraph at lines 49--49
+\OT1/ptm/m/n/14.4 based ex-e-cu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+[]|\OT1/ptm/m/n/14.4 Use the hy-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+\OT1/ptm/m/n/14.4 brid clas-si-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+\OT1/ptm/m/n/14.4 cal{quantum
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+\OT1/ptm/m/n/14.4 ar-chi-tec-ture
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+\OT1/ptm/m/n/14.4 for bat-tery
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+\OT1/ptm/m/n/14.4 mon-i-tor-ing by
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+\OT1/ptm/m/n/14.4 af-ter clas-si-cal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+\OT1/ptm/m/n/14.4 pre-pro-cess-ing
+ []
+
+
+Underfull \hbox (badness 5862) in paragraph at lines 50--51
+\OT1/ptm/m/n/14.4 of volt-age and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+\OT1/ptm/m/n/14.4 tem-per-a-ture
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
+[]|\OT1/ptm/m/n/14.4 AutoQML: A
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
+\OT1/ptm/m/n/14.4 Frame-work
+ []
+
+
+Underfull \hbox (badness 2426) in paragraph at lines 55--55
+\OT1/ptm/m/n/14.4 for Au-to-mated
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
+\OT1/ptm/m/n/14.4 Quan-tum Ma-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+[]|\OT1/ptm/m/n/14.4 Introduces au-to-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+\OT1/ptm/m/n/14.4 mated quan-tum
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+\OT1/ptm/m/n/14.4 model se-lec-tion,
+ []
+
+
+Underfull \hbox (badness 3623) in paragraph at lines 56--56
+\OT1/ptm/m/n/14.4 fea-ture en-cod-ing,
+ []
+
+
+Underfull \hbox (badness 7777) in paragraph at lines 56--56
+\OT1/ptm/m/n/14.4 and hy-per-pa-ram-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+\OT1/ptm/m/n/14.4 e-ter tun-ing in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+[]|\OT1/ptm/m/n/14.4 High com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+\OT1/ptm/m/n/14.4 pu-ta-tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+\OT1/ptm/m/n/14.4 over-head;
+ []
+
+
+Underfull \hbox (badness 2150) in paragraph at lines 57--57
+\OT1/ptm/m/n/14.4 sim-u-la-tor de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+\OT1/ptm/m/n/14.4 tai-lored for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+\OT1/ptm/m/n/14.4 time-series
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+[]|\OT1/ptm/m/n/14.4 Adopt au-to-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+\OT1/ptm/m/n/14.4 mated quan-tum
+ []
+
+
+Underfull \hbox (badness 4995) in paragraph at lines 58--59
+\OT1/ptm/m/n/14.4 ker-nel and hy-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+\OT1/ptm/m/n/14.4 per-pa-ram-e-ter
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+\OT1/ptm/m/n/14.4 man-ual QSVM
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 58--59
+\OT1/ptm/m/n/14.4 op-ti-miza-tion for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+[]|\OT1/ptm/m/n/14.4 Real-Time
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+\OT1/ptm/m/n/14.4 Quan-tum
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+\OT1/ptm/m/n/14.4 Ma-chine
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+\OT1/ptm/m/n/14.4 Learning-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+\OT1/ptm/m/n/14.4 Based
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+\OT1/ptm/m/n/14.4 Anomaly
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+\OT1/ptm/m/n/14.4 De-tec-tion for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+\OT1/ptm/m/n/14.4 Lithium-Ion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+[]|\OT1/ptm/m/n/14.4 Proposes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+\OT1/ptm/m/n/14.4 quantum-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+\OT1/ptm/m/n/14.4 enhanced K-
+ []
+
+
+Underfull \hbox (badness 5741) in paragraph at lines 64--64
+\OT1/ptm/m/n/14.4 Means clus-ter-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+\OT1/ptm/m/n/14.4 for real-time
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+\OT1/ptm/m/n/14.4 us-ing bat-tery
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
+[]|\OT1/ptm/m/n/14.4 Focuses on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
+\OT1/ptm/m/n/14.4 clus-ter-ing;
+ []
+
+
+Underfull \hbox (badness 1406) in paragraph at lines 65--65
+\OT1/ptm/m/n/14.4 re-quires mul-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
+\OT1/ptm/m/n/14.4 ti-ple qubits;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
+\OT1/ptm/m/n/14.4 real-time
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
+\OT1/ptm/m/n/14.4 hard-ware
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
+\OT1/ptm/m/n/14.4 fea-si-bil-ity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+[]|\OT1/ptm/m/n/14.4 Extend the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+\OT1/ptm/m/n/14.4 anomaly de-tec-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+\OT1/ptm/m/n/14.4 tion frame-work
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+\OT1/ptm/m/n/14.4 by re-plac-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+\OT1/ptm/m/n/14.4 clus-ter-ing with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+\OT1/ptm/m/n/14.4 QSVM-based
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+\OT1/ptm/m/n/14.4 su-per-vised
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+\OT1/ptm/m/n/14.4 dendrite-risk
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
+[]|\OT1/ptm/m/n/14.4 Quantum
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
+\OT1/ptm/m/n/14.4 Kernel-Based
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
+\OT1/ptm/m/n/14.4 Sup-port Vec-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
+\OT1/ptm/m/n/14.4 tor Ma-chine
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
+\OT1/ptm/m/n/14.4 with QAOA
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
+\OT1/ptm/m/n/14.4 Lung Can-cer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+[]|\OT1/ptm/m/n/14.4 Uses QAOA-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+\OT1/ptm/m/n/14.4 based quan-tum
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+\OT1/ptm/m/n/14.4 fea-ture em-bed-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+\OT1/ptm/m/n/14.4 achiev-ing bet-ter
+ []
+
+
+Underfull \hbox (badness 3635) in paragraph at lines 72--72
+\OT1/ptm/m/n/14.4 re-sults for small
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--73
+[]|\OT1/ptm/m/n/14.4 Simulator
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--73
+\OT1/ptm/m/n/14.4 ex-e-cu-tion;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--73
+\OT1/ptm/m/n/14.4 high cost;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--73
+\OT1/ptm/m/n/14.4 eval-u-ated
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+[]|\OT1/ptm/m/n/14.4 Adopt QAOA-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+\OT1/ptm/m/n/14.4 based quan-tum
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+\OT1/ptm/m/n/14.4 em-bed-ding for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+\OT1/ptm/m/n/14.4 cap-tur-ing non-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+\OT1/ptm/m/n/14.4 re-duced bat-tery
+ []
+
+
+Overfull \hbox (58.64226pt too wide) in alignment at lines 28--78
+ [] [] [] [] [] 
  []
 
 [3
 
-] [4] [5]) (./Chapters/Chapter3.tex [6]
-<Figures/diagram.png, id=56, 2112.89375pt x 1359.0775pt>
-File: Figures/diagram.png Graphic file (type png)
-<use Figures/diagram.png>
-Package pdftex.def Info: Figures/diagram.png  used on input line 11.
-(pdftex.def)             Requested size: 329.60126pt x 212.00279pt.
+] [4]) (./Chapters/Chapter3.tex [5]
+<Figures/diagram1.png, id=53, 2090.81125pt x 924.45375pt>
+File: Figures/diagram1.png Graphic file (type png)
+<use Figures/diagram1.png>
+Package pdftex.def Info: Figures/diagram1.png  used on input line 11.
+(pdftex.def)             Requested size: 391.39874pt x 173.05252pt.
+ [6
 
+] [7] [8] [9]) (./Chapters/Chapter4.tex [10] [11 <./Figures/diagram1.png>] [12
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7
-
-] [8 <./Figures/diagram.png>] [9] [10] [11]) (./Chapters/Chapter4.tex
-[12] [13
-
-]) (./Chapters/Chapter5.tex [14]
-<Figures/download.png, id=86, 714.7503pt x 1434.5595pt>
+]) (./Chapters/Chapter5.tex [13]
+<Figures/download.png, id=83, 714.7503pt x 1434.5595pt>
 File: Figures/download.png Graphic file (type png)
 <use Figures/download.png>
 Package pdftex.def Info: Figures/download.png  used on input line 9.
@@ -723,9 +1493,9 @@ LaTeX Warning: Float too large for page by 13.26096pt on input line 12.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./Chapters/Chapter7.tex [15
+) (./Chapters/Chapter7.tex [14
 
-] [16 <./Figures/download.png>]) [17
+] [15 <./Figures/download.png>]) [16
 
 ]
 No file bethesis.bbl.
@@ -745,10 +1515,10 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 8002 strings out of 476182
- 127033 string characters out of 5795595
- 1943975 words of memory out of 5000000
- 29861 multiletter control sequences out of 15000+600000
+ 8003 strings out of 476182
+ 127050 string characters out of 5795595
+ 1945975 words of memory out of 5000000
+ 29862 multiletter control sequences out of 15000+600000
  585988 words of font info for 92 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  85i,12n,93p,1611b,310s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -758,10 +1528,10 @@ Here is how much of TeX's memory you used:
 ist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on bethesis.pdf (26 pages, 448742 bytes).
+Output written on bethesis.pdf (25 pages, 368416 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 123 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
