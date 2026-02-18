@@ -6,12 +6,15 @@
 The proposed system design aims at coming up with a workable and dependable hybrid Quantum Support Vector Machine (QSVM)-based system in detecting anomalies and assessing risks in electric vehicle (EV) battery charging systems. The architecture is inspired by currently available quantum machine learning-based battery anomaly detection solutions, especially those based on an unsupervised clustering algorithm like K-means. Although the clustering-based methods have proven to be useful in finding rough deviations, they fail to perceive fine or earlier deviations and lack a decisional margin. The proposed system, to overcome such shortcomings, substitutes the clustering process with an explicit risk-oriented decision layer and the margin-based hybrid QSVM classifier.
 
 The system is designed based on modular pipeline architecture where every module has a particular role to play and the structured outputs are sent out to the next process. The approach is appropriate in the real world because this modular design enhances interpretability, scalability and easy integration with the currently available battery management systems.
+
+\begin{landscape}
 \begin{figure}[p]
     \centering
-    \includegraphics[width=0.95\textwidth]{Figures/diagram1.png}
+    \includegraphics[width=\linewidth]{Figures/diagram1.pdf}
     \caption{Architecture of the Proposed QSVM-Based EV Battery System}
     \label{fig:Architecture of the Proposed QSVM-Based EV Battery System}
-\end{figure} 
+\end{figure}
+\end{landscape}
 \section{System Overview}
 
 The time-stamped EV battery sensor data is processed in the following modules according to the proposed system: data acquisition, preprocessing, classical feature engineering, quantum-inspired feature mapping, hybrid QSVM classification, risk assessment, and output monitoring. Data preparation and baseline feature extraction is done using classical machine learning methods, whilst the representation of features is improved using quantum-inspired learning principles. A QSVM-based classifier is used to produce the final decision in a form of a risk-level in battery charging.
