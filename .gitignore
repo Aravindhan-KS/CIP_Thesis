@@ -14,6 +14,15 @@
 *.snm
 *.vrb
 *.idx
+*.bib
+*.bstZone.Identifier
+*.styZone.Identifier
+*.bibZone.Identifier
+*.pdfZone.Identifier
+*.texZone.Identifier
+*.tex~Zone.Identifier
+*.txtZone.Identifier
+*.tex~
 *.bst
 *.ilg
 *.ind
