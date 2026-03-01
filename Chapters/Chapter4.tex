@@ -1,40 +1,156 @@
-% Chapter 4
+\chapter{System Module Design}
 
-\chapter{PERFORMANCE METRICS} % All Chapter headings in ALL CAPS
+\section{Overview of the Proposed Architecture}
 
-\section{Accuracy}
-\paragraph{\textbf{Accuracy}}
-measures the proportion of correctly classified samples among all test instances.
-\begin{equation}
-\mathrm{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
-\end{equation}
-where TP, TN, FP, and FN denote true positives, true negatives, false positives, and false negatives, respectively. 
+The proposed framework is organized as a sequence of interconnected modules, each responsible for a specific stage in the battery degradation analysis process. The system combines classical signal processing techniques with quantum-enhanced machine learning for risk prediction. Data flows progressively through preprocessing, feature construction, temporal modelling, quantum mapping, classification, and final risk reporting.
 
-\section{Recall}
-\textbf{Recall}
-refers to evaluating the model’s skill to accurately classify real anomalous examples
-\begin{equation}
-\mathrm{Recall} = \frac{TP}{TP + FN}
-\end{equation}
+The complete system is divided into the following modules:
 
-High recall is critical when it comes to safety monitoring for EV battery packs, as a lack of recognition of an anomaly can cause serious problems.
+\begin{enumerate}
+    \item Environment Setup
+    \item Data Loading
+    \item Timestamp Alignment
+    \item Missing Value Handling
+    \item Statistical Feature Extraction
+    \item Dendrite-Oriented Feature Extraction
+    \item Sliding Window Modelling
+    \item Window-Level Feature Construction
+    \item Quantum Kernel SVM Classification
+    \item Risk Assessment and Reporting
+\end{enumerate}
 
-\section{Feature Space Separability}
-\textbf{Feature Space Separability(FSS)}
-This refers to the separability in the feature space that results after the quantum-inspired processing step
-\begin{equation}
-\mathrm{FSS} =
-\frac{\| \mu_{\mathrm{normal}} - \mu_{\mathrm{anomaly}} \|_{2}}
-{\sigma_{\mathrm{normal}} + \sigma_{\mathrm{anomaly}}}
-\end{equation}
+\section{Module 0: Environment Setup}
 
-A larger FSS value means better class separability achieved by the quantum support feature transformation process.
+This module prepares the computational environment required for implementation. All necessary libraries for numerical computation, visualization, machine learning, and MATLAB file processing are imported at this stage. The dataset stored in Google Drive is also mounted to ensure direct access during execution.
 
-\section{Variance Amplification Ratio}
-\textbf{Variance Amplification Ratio(VAR)}
-measures the amount of variance in features that is increased by the quantum-inspired transformation.
-\begin{equation}
-\mathrm{VAR} = \frac{\mathrm{Var}\!\left(Q(x)\right)}{\mathrm{Var}(x)}
-\end{equation}
-Q(x) means the quantum-transformed feature vector.
+This step ensures that the pipeline runs in a controlled and reproducible manner.
 
+\section{Module 1: Data Loading}
+
+The NASA battery dataset, stored in MATLAB format, is loaded into memory in this stage. A total of 35 battery files were considered, out of which 33 valid files were successfully processed.
+
+Each file contains multiple operational cycles, including charge, discharge, and impedance measurements. These cycles are extracted and organized into a structured dictionary format to allow systematic downstream processing.
+
+In total, 7,313 cycles were loaded across all batteries.
+
+\section{Module 2: Timestamp Alignment}
+
+Battery cycles are recorded with associated time arrays. To ensure consistency across samples, timestamps are extracted and aligned with their respective cycle indices.
+
+This alignment step allows temporal comparisons between cycles and supports later sliding window modelling.
+
+\section{Module 3: Missing Value Handling}
+
+The dataset contains structural variations across different cycle types. Therefore, safe extraction mechanisms are used to retrieve the following parameters:
+
+\begin{itemize}
+    \item Capacity
+    \item Voltage
+    \item Current
+    \item Temperature
+    \item Time
+    \item Impedance components (Re and Rct)
+\end{itemize}
+
+A total of 4,600 discharge and impedance cycles were successfully extracted. As expected, impedance cycles do not contain capacity values. Other core signals such as voltage, current, and temperature were found to be complete.
+
+Remaining missing numerical entries were handled using median-based imputation.
+
+\section{Module 4: Statistical Feature Engineering}
+
+Raw time-series signals are converted into numerical descriptors for each discharge cycle.
+
+Voltage signals are summarized using mean, standard deviation, minimum, maximum, and range. Current and temperature signals are represented using similar statistical indicators. Discharge duration is computed from the time array.
+
+Impedance-related characteristics such as mean impedance, standard deviation, Re, and Rct are also included.
+
+After removing invalid entries, 2,667 valid discharge cycles were retained, producing 17 statistical features.
+
+\section{Module 4b: Dendrite-Specific Feature Engineering}
+
+In addition to general statistical descriptors, features that may indicate dendrite formation are extracted.
+
+Differential capacity is represented as:
+
+\[
+\frac{dQ}{dV}
+\]
+
+Changes in peak position and magnitude are considered potential indicators of internal structural variations.
+
+Higher-order voltage characteristics such as kurtosis, skewness, entropy, and interquartile range are also computed. Voltage at 50\% depth of discharge is included as an additional indicator.
+
+Coulombic efficiency is defined as:
+
+\[
+CE = \frac{Q_{discharge}}{Q_{charge}}
+\]
+
+A decrease in this ratio may suggest irreversible lithium consumption.
+
+After merging these features, the dataset contains 18 engineered descriptors.
+
+\section{Module 5: Sliding Window Modelling}
+
+Battery degradation is inherently temporal. To capture this behaviour, sliding windows are applied across cycle sequences.
+
+Three window sizes were considered: 5, 10, and 20 cycles, with a stride of 6 cycles. The average degradation rate observed in the dataset was approximately $-1.73\%$ per cycle.
+
+This process resulted in 352 window-level samples across the 33 batteries.
+
+\section{Module 6: Window-Level Feature Construction}
+
+Within each sliding window, trend-based features are computed.
+
+Capacity is analysed in terms of mean value, standard deviation, total change, and linear slope. Impedance and temperature trends are similarly evaluated. Variance of cycle-to-cycle capacity differences is also calculated to capture instability patterns.
+
+This stage produces 33 window-level features for each of the 352 samples.
+
+\section{Module 7: Data Validation}
+
+Before quantum processing, the engineered dataset is examined to ensure consistency. Descriptive statistics are reviewed and correlation patterns are analysed to detect redundancy.
+
+No missing values remain after preprocessing.
+
+\section{Module 8: Quantum Feature Mapping with PCA}
+
+Since quantum circuits scale with feature dimension, dimensionality reduction is applied prior to encoding.
+
+All classical features are first standardized. Principal Component Analysis then reduces the feature space from 31 to 4 dominant components. These components are scaled to the range $[0, \pi]$ to serve as rotation parameters in the quantum circuit.
+
+The resulting dataset consists of 352 samples with 4 features each.
+
+\section{Module 9: Quantum Kernel SVM Classification}
+
+A parameterized 4-qubit circuit is constructed for feature encoding. Hadamard gates create superposition states, while RZ rotations encode feature values. Entanglement is introduced using CNOT operations.
+
+The quantum state is expressed as:
+
+\[
+|\psi(x)\rangle = U_{\phi}(x)|0\rangle
+\]
+
+Similarity between samples is computed using:
+
+\[
+K(x_i, x_j) = |\langle \psi(x_i) | \psi(x_j) \rangle|^2
+\]
+
+The dataset is divided into 80\% training (281 samples) and 20\% testing (71 samples) using stratified sampling.
+
+A Support Vector Classifier is trained using the precomputed quantum kernel. The final decision boundary is defined by 52 support vectors.
+
+\section{Module 10: Risk Assessment and Output Generation}
+
+Prediction probabilities from the QSVM model are converted into risk categories. Samples with probability greater than or equal to 0.5 are classified as High Risk, while others are labelled Low Risk.
+
+The system generates:
+
+\begin{itemize}
+    \item A detailed per-sample risk report
+    \item A battery-level summary report
+    \item Performance metrics
+    \item Risk visualization outputs
+\end{itemize}
+
+These outputs provide interpretable battery health assessment and support monitoring applications.
