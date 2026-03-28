@@ -1,40 +1,71 @@
-% Chapter 4
+\chapter{CONCLUSION AND FUTURE WORK}
 
-\chapter{PERFORMANCE METRICS} % All Chapter headings in ALL CAPS
+\section{Summary of the Work}
+This powerful data processing pipeline established a cornerstone. We successfully converted raw, heterogeneous battery data into a standardized, clean, and feature-rich dataset. These multi-scale temporal features now prepare for the next phase of this project: the development and training of Quantum Machine Learning models for predictive analytics, with the main focus on early detection and understanding of battery dendrite formation to enhance battery safety, life, and performance. Feature vectors generated at this step are the required input for advanced machine learning algorithms and allow the study of subtle signatures of degradation that might indicate dendrite growth.
 
-\section{Accuracy}
-\paragraph{\textbf{Accuracy}}
-measures the proportion of correctly classified samples among all test instances.
-\begin{equation}
-\mathrm{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
-\end{equation}
-where TP, TN, FP, and FN denote true positives, true negatives, false positives, and false negatives, respectively. 
+\section{Quantum Machine Learning Enhancements}
 
-\section{Recall}
-\textbf{Recall}
-refers to evaluating the model’s skill to accurately classify real anomalous examples
-\begin{equation}
-\mathrm{Recall} = \frac{TP}{TP + FN}
-\end{equation}
+Future improvements to the system can enhance quantum feature representation and classification performance.
 
-High recall is critical when it comes to safety monitoring for EV battery packs, as a lack of recognition of an anomaly can cause serious problems.
+\subsection{Expand Qubit Count}
 
-\section{Feature Space Separability}
-\textbf{Feature Space Separability(FSS)}
-This refers to the separability in the feature space that results after the quantum-inspired processing step
-\begin{equation}
-\mathrm{FSS} =
-\frac{\| \mu_{\mathrm{normal}} - \mu_{\mathrm{anomaly}} \|_{2}}
-{\sigma_{\mathrm{normal}} + \sigma_{\mathrm{anomaly}}}
-\end{equation}
+Increasing the number of qubits from 4 to 6–8 would expand the feature space to 64–256 dimensions.
 
-A larger FSS value means better class separability achieved by the quantum support feature transformation process.
+Maintaining PCA variance between 80–90\% may improve kernel expressiveness and reduce support vector ratios.
 
-\section{Variance Amplification Ratio}
-\textbf{Variance Amplification Ratio(VAR)}
-measures the amount of variance in features that is increased by the quantum-inspired transformation.
-\begin{equation}
-\mathrm{VAR} = \frac{\mathrm{Var}\!\left(Q(x)\right)}{\mathrm{Var}(x)}
-\end{equation}
-Q(x) means the quantum-transformed feature vector.
+\subsection{Advanced Quantum Feature Maps}
 
+Future implementations may replace the existing feature map with advanced circuits such as:
+
+\begin{itemize}
+\item Pauli Feature Maps
+\item IQP circuits
+\end{itemize}
+
+Trainable quantum kernels can also be introduced to maximize class separability.
+
+\subsection{Hybrid Variational Quantum Circuits}
+
+Variational Quantum Eigensolver (VQE) or Quantum Neural Networks may be integrated before the SVM classifier to learn latent quantum representations.
+
+\section{Classical Machine Learning Enhancements}
+
+\subsection{Improved Label Design}
+
+Future work may incorporate physics-based thresholds such as State of Health (SOH) limits instead of statistical quantile labels.
+
+\subsection{Enhanced Feature Engineering}
+
+Additional electrochemical features such as Electrochemical Impedance Spectroscopy (EIS) parameters may be included.
+
+Wavelet transforms can also be used to extract multi-frequency degradation signatures.
+
+\subsection{Classical Baseline Comparison}
+
+Benchmarking against classical models such as:
+
+\begin{itemize}
+\item Random Forest
+\item XGBoost
+\item LSTM
+\end{itemize}
+
+can help evaluate the practical advantages of quantum models.
+
+\section{Data and Scalability}
+
+Future experiments may include larger datasets from NASA and CALCE battery repositories to improve generalization.
+
+Testing on real quantum hardware using IBM Quantum devices can also evaluate practical quantum advantage.
+
+\section{System Integration and Deployment}
+
+The risk prediction module can be integrated into Battery Management Systems (BMS) as a REST API microservice.
+
+Real-time dashboards can visualize battery risk levels and trigger alerts when critical thresholds are reached.
+
+Explainability methods such as SHAP can be used to interpret feature contributions in the model predictions.
+
+\section{Multi-Chemistry Extension}
+
+Future systems may extend the methodology to other battery chemistries such as lithium-sulfur or solid-state batteries, enabling broader battery safety monitoring applications.

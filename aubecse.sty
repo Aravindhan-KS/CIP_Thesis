@@ -21,9 +21,13 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{enumitem}
 %\usepackage[nonumberlist,toc]{glossaries}
 %\usepackage{glossary-longragged}
-\usepackage{enumitem}
+
 
 \let\@afterindentfalse\@afterindenttrue
 \@afterindenttrue
@@ -31,8 +35,8 @@
 \urlstyle{same}
 %\makeglossaries
 %\renewcommand*{\glsnamefont}[1]{{\bfseries#1}}
-%\newcommand{\bflabel}[1]{{\normalfont #1}\hfill}
-\newcommand{\bflabel}[1]{\normalfont #1\hfill}
+%\renewcommand{\bflabel}[1]{{\normalfont #1}\hfill}}
+%\renewcommand{\bflabel}[1]{\normalfont #1\hfill}
 \setlist{nolistsep}
 \graphicspath{{Figures/}}
 \setverbatimfont{\normalfont\rmfamily}% make verbatims use the body font
@@ -48,7 +52,7 @@
 }
 % left, right margins and textwidth
 %\setlrmarginsandblock{1.5in}{0.95in}{*}
-\setlrmarginsandblock{25mm}{20mm}{*}
+\setlrmarginsandblock{40mm}{25mm}{*}
 \newlength{\linespace}
 \setlength{\linespace}{\baselineskip} % current equivalent of \onelineskip
 \setlength{\headheight}{\onelineskip}
