@@ -25,6 +25,8 @@
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\newcommand{\tamilfont}{}
 %\usepackage[nonumberlist,toc]{glossaries}
 %\usepackage{glossary-longragged}
 
@@ -272,14 +274,15 @@
 \thispagestyle{empty}
 }
 
-\newcommand{\auabstracttamil}{%
+\newcommand{\auabstracttamil}[1][abstracttamil]{%
 %\addtotextheight{-\botfiddle}%
 \clearpage
 \phantomsection
 \addcontentsline{toc}{chapter}{ABSTRACT -- TAMIL}
 \pretoctitle{ABSTRACT}
 \DoubleSpacing
-\thispagestyle{empty}%
+\input{./FrontMatter/#1}
+\thispagestyle{empty}
 }
 
 
