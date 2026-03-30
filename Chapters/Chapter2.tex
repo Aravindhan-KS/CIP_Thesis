@@ -1,64 +1,49 @@
-% Chapter 1
+\chapter{LITERATURE REVIEW}
 
-\chapter{LITERATURE REVIEW} % Write in your own chapter title All Chapter headings in CAPS
+Electric vehicles rely heavily on lithium-ion batteries for energy storage. Ensuring the safety and reliability of these batteries is therefore a critical research problem. One of the major challenges in battery management is the early detection of abnormal behaviour such as lithium dendrite formation. Detecting these patterns requires analyzing large amounts of time-series sensor data, including voltage, current, temperature, and state-of-charge measurements.
 
-\begin{longtable}{|p{3.8cm}|p{4cm}|p{3.5cm}|p{4cm}|}
-\caption{Literature Review} \\
+In recent years, machine learning techniques have been widely used for battery health monitoring and anomaly detection. At the same time, advances in quantum computing have introduced new approaches for improving machine learning models through quantum feature mapping and quantum kernel methods. This chapter reviews the existing research related to quantum support vector machines, hybrid quantum-classical learning frameworks, and anomaly detection in battery systems.
 
-\hline
-\textbf{Paper} & \textbf{Methodology} & \textbf{Limitations} & \textbf{Ideas for Adoption} \\ 
-\hline
-\endfirsthead
+\section{Quantum Kernel Methods in Support Vector Machines}
 
-\hline
-\textbf{Paper} & \textbf{Methodology} & \textbf{Limitations} & \textbf{Ideas for Adoption} \\ 
-\hline
-\endhead
+Support Vector Machines are commonly used for classification tasks due to their ability to construct decision boundaries between different classes of data. Traditional SVM models rely on classical kernel functions such as polynomial or radial basis kernels to map data into higher dimensional feature spaces.
 
-Comparative Investigation of Quantum and Classical Kernel Functions Applied in Support Vector Machine Algorithms &
-Performs a comparative study of classical kernels and quantum kernels within the SVM framework. Different quantum feature maps are evaluated using QSVM on benchmark datasets. &
-Uses quantum simulators; high kernel computation cost; limited scalability; lacks real-world application focus. &
-Adopt the quantum kernel comparison framework to evaluate classical SVM versus QSVM for battery time-series features, justifying improved separability for early dendrite-risk patterns. \\
+Recent work by Abdulsalam and Ahmad explored the use of quantum kernels within the SVM framework \cite{qml_kernel_2025}. Their study compared classical kernel functions with quantum kernel functions and analyzed their performance across several classification tasks. The results showed that quantum kernels can sometimes improve the separability of complex datasets by mapping data into richer feature spaces.
 
-\hline
+The findings from this work provide useful insights into how kernel functions influence classification performance. In the proposed project, this concept is adopted by using a quantum-inspired kernel within a QSVM model to improve the separability of battery degradation patterns extracted from sensor data.
 
-Assessment of Quantum Feature Map for Binary Forest Classification using QSVM &
-Evaluates multiple Pauli-based quantum feature maps for binary classification. Features are normalized, reduced, encoded, and classified using QSVM with Pareto-front analysis. &
-Relies on simulators; inconsistent QSVM superiority; scalability limitations in NISQ-era hardware. &
-Apply quantum feature map selection strategies to battery sensor data and use Pareto analysis to balance accuracy and computational cost. \\
+\section{Quantum Feature Mapping for Classification}
 
-\hline
+An important component of quantum machine learning models is the process of encoding classical data into quantum states. Different quantum feature maps can significantly influence how well a QSVM classifier performs.
 
+Pramanik and Jha evaluated multiple quantum feature maps for classification tasks using QSVM \cite{qsvm_forest_classification_2025}. Their research investigated Pauli-based feature maps and analyzed their effectiveness for binary classification problems. The study demonstrated that selecting an appropriate feature encoding method plays an important role in improving model accuracy.
 
-Hybrid Quantum–Classical Framework for Urban Traffic State Classification &
-Implements a hybrid pipeline combining classical feature extraction with quantum encoding and QSVM-based classification. &
-Limited dataset; simulator-based execution; real-time scalability not addressed. &
-Use the hybrid classical–quantum architecture for battery monitoring by applying QSVM after classical preprocessing of voltage and temperature data. \\
+This work motivates the use of quantum-inspired feature mapping in the proposed system. By encoding classical battery features into a higher dimensional quantum feature space, the QSVM classifier can better capture nonlinear relationships within the sensor data.
 
-\hline
+\section{Hybrid Classical-Quantum Learning Frameworks}
 
+Several researchers have proposed hybrid architectures that combine classical machine learning techniques with quantum models. In such systems, classical algorithms perform preprocessing and feature extraction, while quantum models perform the final classification.
 
-AutoQML: A Framework for Automated Quantum Machine Learning &
-Introduces automated quantum model selection, feature encoding, and hyperparameter tuning in hybrid workflows. &
-High computational overhead; simulator dependence; not tailored for time-series data. &
-Adopt automated quantum kernel and hyperparameter tuning to reduce manual QSVM optimization for battery datasets. \\
+Yi proposed a hybrid quantum-classical framework for traffic state classification \cite{hybrid_quantum_traffic_2025}. In this work, classical feature extraction techniques were applied to traffic sensor data, and the processed features were then used as inputs for a QSVM classifier. The results showed that combining classical preprocessing with quantum classification can improve performance for complex datasets.
 
-\hline
+Similarly, Roth et al. introduced the AutoQML framework, which automates the design of quantum machine learning pipelines \cite{autoqml_framework_2025}. The framework automatically selects quantum feature maps, tunes model parameters, and constructs hybrid learning pipelines. Although this approach simplifies the model development process, it also introduces additional computational overhead.
 
+These studies demonstrate that hybrid quantum-classical architectures can provide flexible and powerful learning systems. The proposed work follows a similar hybrid approach by combining classical feature engineering with quantum-inspired feature mapping and QSVM classification.
 
-Real-Time Quantum Machine Learning-Based Anomaly Detection for Lithium-Ion Battery Packs &
-Proposes quantum-enhanced K-Means clustering for real-time anomaly detection using battery sensor data. &
-Focuses on clustering; requires multiple qubits; real-time hardware feasibility unclear. &
-Extend the anomaly detection framework by replacing clustering with QSVM-based supervised dendrite-risk classification. \\
+\section{Quantum Machine Learning for Battery Monitoring}
 
-\hline
+Machine learning methods have also been explored for battery monitoring and anomaly detection applications. In particular, researchers have begun investigating quantum machine learning techniques for analyzing battery sensor data.
 
+A study by P., V., and G. proposed a real-time quantum machine learning approach for detecting defective cells in lithium-ion battery packs \cite{qml_battery_anomaly_2025}. Their system used quantum-enhanced clustering techniques to identify abnormal battery behaviour using voltage, current, and temperature measurements. Although their approach demonstrated promising results, it relied primarily on clustering-based anomaly detection rather than supervised classification models.
 
-Quantum Kernel-Based Support Vector Machine with QAOA Embedding for Lung Cancer Prediction &
-Uses QAOA-based quantum feature embedding with QSVM, achieving better results for small datasets. &
-Simulator execution; high cost; evaluated only on static medical data. &
-Adopt QAOA-based quantum embedding for capturing nonlinear patterns in reduced battery feature sets. \\
+Another related work by Dutta et al. explored the use of quantum kernel based support vector machines with Quantum Approximate Optimization Algorithm embedding for medical data classification \cite{quantum_svm_cancer_2024}. Their results showed that quantum feature embedding can improve classification performance when compared with traditional SVM models.
 
-\hline
+The proposed project takes inspiration from these works by applying QSVM classification to battery degradation analysis. Instead of clustering methods, the system uses supervised classification to predict battery risk levels based on engineered features derived from battery sensor data.
 
-\end{longtable}
+\section{Research Gap}
+
+Although existing research demonstrates the potential of quantum machine learning models, several limitations still remain. Many studies rely on simulated quantum environments rather than real quantum hardware, which limits their practical evaluation. Additionally, several approaches focus on clustering-based anomaly detection instead of supervised classification techniques that can provide clearer decision boundaries.
+
+Another limitation is that many quantum machine learning studies evaluate their models on relatively small or domain-specific datasets. Real-world battery monitoring systems generate large amounts of multivariate time-series data, which require specialized preprocessing and feature engineering techniques.
+
+To address these challenges, the proposed work develops a hybrid classical-quantum framework for early detection of lithium dendrite risk in EV batteries. The system integrates classical feature extraction, quantum-inspired feature mapping, and QSVM classification to analyze battery degradation patterns and predict risk levels.
