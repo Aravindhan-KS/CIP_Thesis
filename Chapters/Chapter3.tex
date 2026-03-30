@@ -10,20 +10,26 @@ The system follows a modular pipeline architecture in which each module performs
 
 \section{System Overview}
 
-The EV battery time-stamped sensor data is processed through the following modules:
+The proposed EV battery monitoring framework follows a sequential processing pipeline that transforms raw sensor measurements into battery risk predictions.
 
-\begin{itemize}
-\item Data Acquisition
-\item Data Preprocessing
-\item Classical Feature Engineering
-\item Quantum-Inspired Feature Mapping
-\item Hybrid QSVM Classification
-\item Risk Assessment and Output Monitoring
-\end{itemize}
+The overall workflow of the system is illustrated in Figure~\ref{fig:SystemWorkflow}. The process begins with acquiring battery sensor measurements and proceeds through preprocessing, feature engineering, quantum feature transformation, and QSVM-based classification.
 
-Data preparation and baseline feature extraction are performed using classical machine learning techniques. Quantum-inspired transformations are then used to enhance the feature representation before classification using a QSVM model.
+The major stages of the workflow are summarized as follows:
 
-% TODO: Insert Figure 3.1 Architecture of the Proposed QSVM-Based EV Battery System
+\begin{enumerate}
+\item \textbf{Data Acquisition:} Battery sensor data such as voltage, current, temperature, and state of charge are collected during charging and discharging cycles.
+
+\item \textbf{Data Preprocessing:} Raw measurements are filtered to remove noise, normalized to maintain consistent scales, and segmented using sliding windows to capture short-term battery behaviour.
+
+\item \textbf{Feature Engineering:} Statistical and electrochemical features are extracted from each window to represent battery behaviour in a structured feature space.
+
+\item \textbf{Quantum Feature Mapping:} Classical feature vectors are mapped into a higher-dimensional Hilbert space using quantum-inspired encoding techniques.
+
+\item \textbf{QSVM Classification:} A hybrid Quantum Support Vector Machine classifier learns decision boundaries between different battery risk levels.
+
+\item \textbf{Risk Assessment:} The predicted QSVM output is interpreted and mapped to battery risk categories, producing monitoring reports and confidence scores.
+\end{enumerate}
+
 \begin{landscape}
 \begin{figure}[p]
     \centering
@@ -32,9 +38,8 @@ Data preparation and baseline feature extraction are performed using classical m
     \label{fig:Architecture of the Proposed QSVM-Based EV Battery System}
 \end{figure}
 \end{landscape}
-\section{System Overview}
 
-\section{Data Acquisition Module}
+\subsection{Data Acquisition Module}
 
 The data acquisition module gathers time-stamped sensor data from EV battery packs during charging cycles. Each record contains synchronized measurements of:
 
@@ -64,7 +69,7 @@ These parameters collectively form a multivariate time-series representation of 
 \end{algorithmic}
 \end{algorithm}
 
-\section{Data Preprocessing Module}
+\subsection{Data Preprocessing Module}
 
 Raw sensor data may contain noise, outliers, and variations in measurement scales. Therefore, preprocessing is necessary before feature extraction.
 
@@ -78,7 +83,6 @@ The preprocessing module performs:
 
 Noise filtering reduces sensor disturbances, normalization ensures comparable feature ranges, and sliding window segmentation divides the time-series data into fixed-length windows that represent short-term charging behaviour.
 
-% TODO: Insert Figure 3.2 Sliding Window Algorithm
 \begin{algorithm}
 \caption{Sliding Window Degradation Modeling}
 \begin{algorithmic}
@@ -101,7 +105,7 @@ Noise filtering reduces sensor disturbances, normalization ensures comparable fe
 \end{algorithmic}
 \end{algorithm}
 
-\section{Classical Feature Engineering Module}
+\subsection{Classical Feature Engineering Module}
 
 After preprocessing, statistical feature engineering is applied to extract meaningful descriptors from each window.
 
@@ -113,6 +117,13 @@ Typical features include:
 \item Rate of change
 \item Stability indicators
 \end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{Figures/1.png}
+\caption{Classical Feature Engineering Module}
+\label{fig:classical_feature_engineering}
+\end{figure}
 
 These features form a structured classical feature vector representing the battery behaviour within a time window. This stage reduces the dimensionality of raw sensor data and provides interpretable inputs for further analysis.
 
@@ -137,24 +148,36 @@ These features form a structured classical feature vector representing the batte
 \STATE \textbf{return} $F$
 \end{algorithmic}
 \end{algorithm}
-% TODO: Insert Figure 3.3 Classical Feature Engineering Block Diagram
-% TODO: Insert Figure 3.4 Statistical Feature Extraction Algorithm
 
-\section{Quantum-Inspired Feature Mapping Module}
+As illustrated in Figure~\ref{fig:classical_feature_engineering}, the classical feature engineering stage extracts statistical and temporal features from battery sensor data.
+
+\subsection{Quantum-Inspired Feature Mapping Module}
 
 The quantum-inspired feature mapping module converts classical feature vectors into a higher-dimensional Hilbert space using quantum encoding techniques.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{Figures/2.png}
+\caption{Quantum-Inspired Feature Mapping Module}
+\label{fig:quantum_feature_mapping}
+\end{figure}
 
 Initially, classical features are encoded using superposition-based representations, allowing multiple components to be represented simultaneously. Entanglement-inspired transformations are then applied to capture interactions between features.
 
 These transformations increase the expressive capability of the feature space without requiring physical quantum hardware.
 
-% TODO: Insert Figure 3.5 Quantum Feature Mapping Block Diagram
-
-\section{Hybrid QSVM Classification Module}
+\subsection{Hybrid QSVM Classification Module}
 
 The proposed system uses a hybrid QSVM classifier to detect anomalous charging behaviour.
 
-Unlike clustering-based approaches, QSVM learns a margin-based decision boundary that separates normal and abnormal battery patterns in the transformed feature space.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{Figures/3.png}
+\caption{Hybrid Quantum Support Vector Machine Classification Module}
+\label{fig:qsvm_module}
+\end{figure}
+
+Unlike clustering-based approaches, QSVM learns a margin-based decision boundary that separates different battery degradation patterns in the transformed feature space.
 
 The similarity between feature vectors is computed using a quantum kernel:
 
@@ -164,30 +187,47 @@ K(x_i,x_j) = |\langle \psi(x_i)|\psi(x_j) \rangle|^2
 
 The QSVM combines quantum kernel feature mapping with classical SVM optimization.
 
-% TODO: Insert Figure 3.6 QSVM Classification Block Diagram
-% TODO: Insert Figure 3.7 Quantum Kernel Construction Algorithm
+\subsection{Risk Assessment and Output Generation}
 
-\section{Risk Assessment and Output Generation}
+The system includes a risk assessment module that interprets the QSVM output to classify battery charging behaviour into different risk levels.
 
-The system includes a risk assessment module that interprets the QSVM output to classify charging behaviour into risk levels.
+The classification output generated by the QSVM model is mapped to predefined battery health categories based on degradation patterns.
 
-The anomaly score or decision margin produced by the QSVM is compared with predefined thresholds to categorize each sample as:
+The battery state is categorized into the following risk levels:
 
 \begin{itemize}
-\item High Risk
+\item Very Low Risk
 \item Low Risk
+\item Medium Risk
+\item High Risk
+\item Critical Risk
 \end{itemize}
+
+These categories represent increasing levels of battery degradation and potential dendrite formation.
 
 The final system outputs include:
 
 \begin{itemize}
-\item Risk level
+\item Predicted risk level
 \item Confidence score
 \item Monitoring reports
 \end{itemize}
 
-% TODO: Insert Figure 3.8 Risk Assessment Block Diagram
-% TODO: Insert Figure 3.9 Battery Risk Assessment Algorithm
+\begin{table}[h]
+\centering
+\caption{Battery Risk Level Categories}
+\begin{tabular}{|c|c|}
+\hline
+Class Label & Risk Level \\
+\hline
+0 & Very Low Risk \\
+1 & Low Risk \\
+2 & Medium Risk \\
+3 & High Risk \\
+4 & Critical Risk \\
+\hline
+\end{tabular}
+\end{table}
 
 \section{Design Summary}
 
