@@ -1,28 +1,10 @@
 \chapter{Implementation and Results}
 
-\section{Overview of the Proposed Architecture}
+\section{Data Preparation and Experimental Setup}
 
-The proposed hybrid Quantum Machine Learning framework was implemented using a modular pipeline that combines classical signal processing with quantum-enhanced machine learning techniques.
+This section presents the experimental setup used for implementing and evaluating the proposed system. It provides an overview of the dataset used in the study, including its source and key characteristics. The procedures for data loading and preprocessing are described to ensure proper preparation of the data for model training. Furthermore, the strategy used to divide the dataset into training and testing subsets is explained. 
 
-The overall workflow of the system includes the following stages:
-
-\begin{enumerate}
-\item Environment Setup
-\item Data Loading
-\item Timestamp Alignment
-\item Missing Value Handling
-\item Statistical Feature Engineering
-\item Dendrite-Oriented Feature Engineering
-\item Sliding Window Modelling
-\item Window-Level Feature Construction
-\item Quantum Feature Mapping
-\item Quantum Support Vector Machine Classification
-\item Risk Assessment and Reporting
-\end{enumerate}
-
-Each module performs a specific transformation on the battery sensor data before passing it to the next stage of the pipeline.
-
-\section{Implementation Environment}
+\subsection{Implementation Environment}
 
 The implementation was carried out using the Python programming language with several scientific computing and quantum computing libraries.
 
@@ -47,7 +29,7 @@ Google Colab & Development and execution environment \\
 
 The implementation was executed using the Google Colab platform, which allows integration of Python libraries and cloud-based computational resources.
 
-\section{Dataset Description}
+\subsection{Dataset Description}
 
 The NASA Lithium-Ion Battery Dataset was used for this study. The dataset consists of battery cycle measurements collected during laboratory experiments.
 
@@ -85,139 +67,13 @@ Valid Cycles after Filtering & 2667 \\
 \end{tabular}
 \end{table}
 
-\section{Data Loading}
+\subsection{Data Loading}
 
 Battery data stored in MATLAB (.mat) format was loaded using the \texttt{scipy.io} library. The MATLAB structures were parsed to extract discharge cycle measurements.
 
 Only discharge cycles were used because they contain the relevant electrochemical behavior needed to analyze battery degradation patterns.
 
-\section{Timestamp Alignment}
-
-Battery cycles contain time arrays representing measurements recorded during each cycle. These timestamps were aligned with cycle indices to maintain consistency across multiple battery datasets.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.8\textwidth]{Figures/Timestamp_Alignment.png}
-\caption{Timestamp Alignment Across Battery Cycles}
-\label{fig:timestamp_alignment}
-\end{figure}
-
-Timestamp alignment enables proper comparison of degradation patterns across batteries.
-
-\section{Missing Value Handling}
-
-Different cycle types contain different measurement fields. Therefore, missing values were handled using safe extraction techniques.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.9\textwidth]{Figures/missing_value_handling.png}
-\caption{Handling Missing Values in Battery Dataset}
-\label{fig:missing_values}
-\end{figure}
-
-Median-based imputation was applied to fill missing entries while preserving statistical characteristics of the dataset.
-
-\section{Statistical Feature Engineering}
-
-Time-series battery signals were transformed into statistical descriptors to provide structured inputs for machine learning models.
-
-The following statistical features were extracted:
-
-\begin{itemize}
-\item Mean
-\item Standard deviation
-\item Minimum value
-\item Maximum value
-\item Median
-\end{itemize}
-
-Electrochemical impedance parameters such as resistance components were also extracted to capture degradation behavior.
-
-\section{Dendrite-Oriented Feature Engineering}
-
-Additional electrochemical indicators were extracted to detect early signs of dendrite formation.
-
-One important feature used is the differential capacity curve defined as
-
-\begin{equation}
-\frac{dQ}{dV}
-\end{equation}
-
-Changes in the differential capacity curve can indicate structural degradation within the battery.
-
-Additional descriptors extracted include:
-
-\begin{itemize}
-\item Skewness
-\item Kurtosis
-\item Entropy
-\item Interquartile Range
-\end{itemize}
-
-These features capture subtle variations in battery behavior that may indicate early dendrite growth.
-
-\section{Sliding Window Modelling}
-
-Battery degradation is a gradual process. To capture temporal degradation patterns, sliding window segmentation was applied across battery cycles.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.9\textwidth]{Figures/sliding_window.png}
-\caption{Sliding Window Segmentation for Temporal Degradation Analysis}
-\label{fig:sliding_window}
-\end{figure}
-
-Within each window, degradation trends such as capacity slope and degradation variance were computed.
-
-\section{Window-Level Feature Construction}
-
-For each sliding window segment, several degradation trend features were extracted.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.9\textwidth]{Figures/8. Feature Correlation Matrix.png}
-\caption{Feature Extraction from Sliding Window Segments}
-\label{fig:window_features}
-\end{figure}
-
-These window-level features represent temporal degradation patterns observed in battery cycles.
-
-\section{Quantum Feature Mapping}
-
-Principal Component Analysis (PCA) was used to reduce the dimensionality of the classical feature space before quantum encoding.
-
-The original feature space was reduced to four principal components. These components were normalized to the interval $[0,\pi]$ for quantum circuit rotations.
-
-Quantum feature encoding was then applied using parameterized quantum gates and entanglement operations.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.9\textwidth]{Figures/quantum_circuit.png}
-\caption{Quantum Kernel Circuit Used for QSVM Feature Encoding}
-\label{fig:quantum_circuit}
-\end{figure}
-
-The quantum circuit used for kernel generation in the QSVM model is shown in Figure~\ref{fig:quantum_circuit}.
-
-\section{Quantum Kernel Support Vector Machine}
-
-The classification stage uses a Quantum Kernel Support Vector Machine (QSVM).
-
-The quantum feature map transforms classical feature vectors into quantum states as follows:
-
-\begin{equation}
-|\psi(x)\rangle = U_{\phi}(x)|0\rangle
-\end{equation}
-
-The similarity between two samples is computed using the quantum kernel function:
-
-\begin{equation}
-K(x_i,x_j)=|\langle\psi(x_i)|\psi(x_j)\rangle|^2
-\end{equation}
-
-The resulting quantum kernel matrix is used by a classical SVM classifier to separate battery risk categories.
-
-\section{Train-Test Split}
+\subsection{Train-Test Split}
 
 The dataset was divided into training and testing sets to evaluate the model performance.
 
@@ -254,10 +110,142 @@ TC5 & Severe degradation indicators & Critical Risk \\
 \end{tabular}
 \end{table}
 
-\section{Results and Discussion}
+
+\section{Results}
+
+\subsection{Timestamp Alignment}
+
+Battery cycles contain time arrays representing measurements recorded during each cycle. These timestamps were aligned with cycle indices to maintain consistency across multiple battery datasets.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{Figures/Timestamp_Alignment.png}
+\caption{Timestamp Alignment Across Battery Cycles}
+\label{fig:timestamp_alignment}
+\end{figure}
+
+Timestamp alignment enables proper comparison of degradation patterns across batteries.
+
+\subsection{Missing Value Handling}
+
+Different cycle types contain different measurement fields. Therefore, missing values were handled using safe extraction techniques.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{Figures/missing_value_handling.png}
+\caption{Handling Missing Values in Battery Dataset}
+\label{fig:missing_values}
+\end{figure}
+
+Median-based imputation was applied to fill missing entries while preserving statistical characteristics of the dataset.
+
+\subsection{Statistical Feature Engineering}
+
+Time-series battery signals were transformed into statistical descriptors to provide structured inputs for machine learning models.
+
+The following statistical features were extracted:
+
+\begin{itemize}
+\item Mean
+\item Standard deviation
+\item Minimum value
+\item Maximum value
+\item Median
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{Figures/statistical_feature_extraction.png}
+\caption{Statistical Features Extracted from Battery Cycles}
+\label{fig:statistical_features}
+\end{figure}
+
+Electrochemical impedance parameters such as resistance components were also extracted to capture degradation behavior.
+
+\subsection{Dendrite-Oriented Feature Engineering}
+
+Additional electrochemical indicators were extracted to detect early signs of dendrite formation.
+
+One important feature used is the differential capacity curve defined as
+
+\begin{equation}
+\frac{dQ}{dV}
+\end{equation}
+
+Changes in the differential capacity curve can indicate structural degradation within the battery.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{Figures/5. Dendrite Specific Features.png}
+\caption{Dendrite-Specific Features Extracted from Battery Cycles}
+\label{fig:dendrite_features}
+\end{figure}
+
+These features capture subtle variations in battery behavior that may indicate early dendrite growth.
+
+\subsection{Sliding Window Modelling}
+
+Battery degradation is a gradual process. To capture temporal degradation patterns, sliding window segmentation was applied across battery cycles.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{Figures/sliding_window.png}
+\caption{Sliding Window Segmentation for Temporal Degradation Analysis}
+\label{fig:sliding_window}
+\end{figure}
+
+Within each window, degradation trends such as capacity slope and degradation variance were computed.
+
+\subsection{Window-Level Feature Construction}
+
+For each sliding window segment, several degradation trend features were extracted.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{Figures/8. Feature Correlation Matrix.png}
+\caption{Feature Extraction from Sliding Window Segments}
+\label{fig:window_features}
+\end{figure}
+
+These window-level features represent temporal degradation patterns observed in battery cycles.
+
+\subsection{Quantum Feature Mapping}
+
+Principal Component Analysis (PCA) was used to reduce the dimensionality of the classical feature space before quantum encoding.
+
+The original feature space was reduced to four principal components. These components were normalized to the interval $[0,\pi]$ for quantum circuit rotations.
+
+Quantum feature encoding was then applied using parameterized quantum gates and entanglement operations.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{Figures/quantum_circuit.png}
+\caption{Quantum Kernel Circuit Used for QSVM Feature Encoding}
+\label{fig:quantum_circuit}
+\end{figure}
+
+The quantum circuit used for kernel generation in the QSVM model is shown in Figure~\ref{fig:quantum_circuit}.
+
+\subsection{Quantum Kernel Support Vector Machine}
+
+The classification stage uses a Quantum Kernel Support Vector Machine (QSVM).
+
+The quantum feature map transforms classical feature vectors into quantum states as follows:
+
+\begin{equation}
+|\psi(x)\rangle = U_{\phi}(x)|0\rangle
+\end{equation}
+
+The similarity between two samples is computed using the quantum kernel function:
+
+\begin{equation}
+K(x_i,x_j)=|\langle\psi(x_i)|\psi(x_j)\rangle|^2
+\end{equation}
+
+The resulting quantum kernel matrix is used by a classical SVM classifier to separate battery risk categories.
 
 The hybrid quantum-classical framework successfully identified degradation patterns within the battery dataset. The quantum feature transformation improved the separability of battery health states in the feature space.
-
+%to fix graph
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{Figures/5.jpeg}
@@ -311,6 +299,7 @@ VAR = \frac{Var(Q(x))}{Var(x)}
 
 where $x$ represents the classical feature vector and $Q(x)$ represents the quantum-transformed feature vector.
 
+%to fix graph
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{Figures/6.jpeg}
@@ -320,4 +309,5 @@ where $x$ represents the classical feature vector and $Q(x)$ represents the quan
 
 Figure~\ref{fig:confusion_matrix} presents the confusion matrix and per-class F1 score of the QSVM classifier.
 
+\section{Summary of Results}
 The results demonstrate that the hybrid quantum-classical learning framework improves the representation of battery degradation patterns and enables early detection of lithium dendrite risk.

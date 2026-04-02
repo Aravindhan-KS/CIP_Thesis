@@ -2,7 +2,7 @@
 
 \section{Design Overview}
 
-The proposed system design aims at developing a dependable hybrid Quantum Support Vector Machine (QSVM)-based system for detecting anomalies and assessing risks in electric vehicle (EV) battery charging systems. The architecture is inspired by existing quantum machine learning-based battery anomaly detection solutions, particularly those based on unsupervised clustering algorithms such as K-means.
+The proposed system design aims at developing a dependable hybrid Quantum Support Vector Machine (QSVM) based system for detecting anomalies and assessing risks in electric vehicle (EV) battery charging systems. The architecture is inspired by existing quantum machine learning-based battery anomaly detection solutions, particularly those based on unsupervised clustering algorithms such as K-means.
 
 Although clustering-based methods can identify coarse deviations in battery behaviour, they often fail to detect subtle early-stage anomalies and lack clear decision margins. To overcome these limitations, the proposed system replaces clustering with a margin-based hybrid QSVM classifier combined with a risk-oriented decision layer.
 
@@ -39,7 +39,7 @@ The major stages of the workflow are summarized as follows:
 \end{figure}
 \end{landscape}
 
-\subsection{Data Acquisition Module}
+\section{Data Acquisition}
 
 The data acquisition module gathers time-stamped sensor data from EV battery packs during charging cycles. Each record contains synchronized measurements of:
 
@@ -53,7 +53,7 @@ The data acquisition module gathers time-stamped sensor data from EV battery pac
 These parameters collectively form a multivariate time-series representation of battery behaviour. Since battery anomalies often result from interactions between multiple parameters rather than single threshold violations, collecting multiple sensor signals provides a more comprehensive monitoring framework.
 
 \begin{algorithm}
-\caption{Battery Data Loading Module}
+\caption{Battery Data Loading}
 \begin{algorithmic}
 \STATE \textbf{Input:} NASA battery .mat files
 \STATE \textbf{Output:} Structured dataset $D$
@@ -69,7 +69,7 @@ These parameters collectively form a multivariate time-series representation of 
 \end{algorithmic}
 \end{algorithm}
 
-\subsection{Data Preprocessing Module}
+\section{Data Preprocessing}
 
 Raw sensor data may contain noise, outliers, and variations in measurement scales. Therefore, preprocessing is necessary before feature extraction.
 
@@ -105,7 +105,7 @@ Noise filtering reduces sensor disturbances, normalization ensures comparable fe
 \end{algorithmic}
 \end{algorithm}
 
-\subsection{Classical Feature Engineering Module}
+\section{Classical Feature Engineering}
 
 After preprocessing, statistical feature engineering is applied to extract meaningful descriptors from each window.
 
@@ -121,7 +121,7 @@ Typical features include:
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\textwidth]{Figures/1.png}
-\caption{Classical Feature Engineering Module}
+\caption{Classical Feature Engineering}
 \label{fig:classical_feature_engineering}
 \end{figure}
 
@@ -151,14 +151,14 @@ These features form a structured classical feature vector representing the batte
 
 As illustrated in Figure~\ref{fig:classical_feature_engineering}, the classical feature engineering stage extracts statistical and temporal features from battery sensor data.
 
-\subsection{Quantum-Inspired Feature Mapping Module}
+\section{Quantum-Inspired Feature Mapping}
 
 The quantum-inspired feature mapping module converts classical feature vectors into a higher-dimensional Hilbert space using quantum encoding techniques.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\textwidth]{Figures/2.png}
-\caption{Quantum-Inspired Feature Mapping Module}
+\caption{Quantum-Inspired Feature Mapping}
 \label{fig:quantum_feature_mapping}
 \end{figure}
 
@@ -166,14 +166,14 @@ Initially, classical features are encoded using superposition-based representati
 
 These transformations increase the expressive capability of the feature space without requiring physical quantum hardware.
 
-\subsection{Hybrid QSVM Classification Module}
+\section{Hybrid QSVM Classification}
 
 The proposed system uses a hybrid QSVM classifier to detect anomalous charging behaviour.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\textwidth]{Figures/3.png}
-\caption{Hybrid Quantum Support Vector Machine Classification Module}
+\caption{Hybrid Quantum Support Vector Machine Classification}
 \label{fig:qsvm_module}
 \end{figure}
 
@@ -187,7 +187,7 @@ K(x_i,x_j) = |\langle \psi(x_i)|\psi(x_j) \rangle|^2
 
 The QSVM combines quantum kernel feature mapping with classical SVM optimization.
 
-\subsection{Risk Assessment and Output Generation}
+\section{Risk Assessment and Output Generation}
 
 The system includes a risk assessment module that interprets the QSVM output to classify battery charging behaviour into different risk levels.
 
@@ -195,13 +195,22 @@ The classification output generated by the QSVM model is mapped to predefined ba
 
 The battery state is categorized into the following risk levels:
 
-\begin{itemize}
-\item Very Low Risk
-\item Low Risk
-\item Medium Risk
-\item High Risk
-\item Critical Risk
-\end{itemize}
+\begin{table}[h]
+\centering
+
+\begin{tabular}{|c|c|}
+\hline
+Class Label & Risk Level \\
+\hline
+0 & Very Low Risk \\
+1 & Low Risk \\
+2 & Medium Risk \\
+3 & High Risk \\
+4 & Critical Risk \\
+\hline
+\caption{Battery Risk Level Categories}
+\end{tabular}
+\end{table}
 
 These categories represent increasing levels of battery degradation and potential dendrite formation.
 
@@ -213,22 +222,7 @@ The final system outputs include:
 \item Monitoring reports
 \end{itemize}
 
-\begin{table}[h]
-\centering
-\caption{Battery Risk Level Categories}
-\begin{tabular}{|c|c|}
-\hline
-Class Label & Risk Level \\
-\hline
-0 & Very Low Risk \\
-1 & Low Risk \\
-2 & Medium Risk \\
-3 & High Risk \\
-4 & Critical Risk \\
-\hline
-\end{tabular}
-\end{table}
 
-\section{Design Summary}
+\section{System Design Summary}
 
 The proposed system extends existing battery anomaly detection frameworks by incorporating quantum-inspired feature mapping within a classical machine learning pipeline. The use of a hybrid QSVM classifier enables better separation between normal and abnormal battery behaviour while maintaining interpretability and computational efficiency.
