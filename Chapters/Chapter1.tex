@@ -1,12 +1,62 @@
-% Chapter 1
+\chapter{Introduction}
 
-\chapter{INTRODUCTION} % Write in your own chapter title All Chapter headings in CAPS
-EVs can contribute to sustainable transportation and lithium-ion batteries are the key to their operation. The charging process subjects the EV batteries to different electrical and thermal conditions, which when allowed to get out of check may lead to abnormal behavior. Thermal runaway is one of the most important safety issues since the phenomenon, which is defined as an abrupt rise in temperature, may cause battery deterioration or system malfunction. Such abnormal conditions must therefore be identified early in order to be able to ensure that operations are safe and also to guarantee reliability of the system.
+\section{Background of the Study}
 
-Due to the growing implementation of sensor-based battery management systems, nowadays it is possible to collect a considerable amount of time-stamped battery charging data in real time. This data is usually continuous measurements, including voltage, current, temperature and state of charge, measured during the charge, which are recorded during the charging cycle. This data is usually analyzed with machine learning methods and used to identify abnormal charging conduct. Nevertheless, most of the current methods are based on classical machine learning models only, and these might not be able to depict the complicated nonlinear relationships that can exist in multivariate time-series sensor data.
+Electric vehicles have become an important part of modern transportation due to their potential to reduce carbon emissions and dependence on fossil fuels. Lithium-ion batteries serve as the primary energy storage system in most electric vehicles because they provide high energy density, longer cycle life, and efficient charging characteristics. However, maintaining the safety and reliability of these batteries remains a significant challenge.
 
-The new developments in quantum computing provided quantum-inspired machine learning (QML) methods that present alternative data representation and transformation techniques. Despite the fact that modern quantum devices have not offered any computational advantage of practical datasets, hybrid learning systems with classical and quantum-inspired components have been considered, because the feature representation can be improved. Here, it is assumed that QML will not replace the classical machine learning, but it represents another processing layer that can be added to the already existing learning pipeline.
+One of the major safety concerns in lithium-ion batteries is the formation of lithium dendrites. Dendrites are microscopic needle-like structures that can develop inside the battery during repeated charging and discharging cycles. Over time, these structures may grow and eventually cause internal short circuits, which can lead to battery degradation, thermal instability, or even failure.
 
-This paper suggests a hybrid classical-quantum learning model to detect anomalies in EV battery charging systems with real time stamped sensor data. It is based on the suggested procedure that combines the classical time-series preprocessing and feature extraction with a quantum-inspired processing layer that is aimed at executing nonlinear feature transformation. The resulting hybrid feature representation is then studied with a classical classifier to determine abnormal charging patterns that relate to thermal runaway.
+Battery management systems are commonly used to monitor battery behavior through sensors that record parameters such as voltage, current, temperature, and capacity. These measurements form time-series data that can be analyzed to detect abnormal patterns. Traditional monitoring techniques rely on threshold-based rules or classical machine learning models. While these approaches are useful, they may not always capture complex nonlinear relationships that exist in battery sensor data.
 
-This project will have the main goal of designing and deploying an entire learning pipeline showing the extent to which advanced machine learning techniques can be integrated in a safety-critical and real world application. Instead of prioritizing the superior performance or computational acceleration, it focuses on the architectural design, feasibility, and the systematization of evaluation of hybrid feature representations of time-series anomaly detection. The efficiency of the suggested framework is assessed with the help of the data set of time-stamped sensor readings that were recorded in EV battery charge and thermal runaway events.
+Recent developments in quantum computing and quantum machine learning have introduced new techniques for representing and processing data in high-dimensional feature spaces. Quantum Support Vector Machines (QSVM) combine classical machine learning methods with quantum feature mapping to improve pattern recognition capabilities. This project explores the use of a hybrid classical and quantum learning framework to detect early signs of lithium dendrite formation in electric vehicle batteries.
+
+\section{Problem Statement}
+
+Lithium dendrite formation poses a serious threat to the safety and performance of electric vehicle batteries. Early detection of such degradation patterns is essential in order to prevent battery failure and ensure reliable operation.
+
+Most existing battery monitoring systems rely on classical data analysis techniques that may not fully capture the complex interactions between battery parameters. As a result, subtle degradation patterns may remain undetected until the battery reaches a critical condition.
+
+Therefore, there is a need for an intelligent monitoring system that can analyze multivariate battery sensor data and identify early signs of abnormal battery behavior. This project addresses this challenge by developing a hybrid quantum machine learning framework that applies quantum support vector machines to detect lithium dendrite risk in EV batteries.
+
+\section{Objectives of the Project}
+
+The main objectives of this project are as follows:
+
+\begin{enumerate}
+\item To analyze battery sensor data including voltage, current, temperature, and capacity obtained from lithium-ion battery cycles.
+\item To preprocess and extract meaningful statistical and electrochemical features from the battery dataset.
+\item To apply dimensionality reduction techniques to prepare the features for quantum encoding.
+\item To implement a quantum feature mapping approach using quantum circuits.
+\item To develop a Quantum Support Vector Machine model for classifying battery degradation risk levels.
+\item To evaluate the performance of the proposed model using appropriate classification metrics.
+\end{enumerate}
+
+\section{Scope of the Work}
+
+The scope of this project focuses on developing a hybrid quantum-classical machine learning framework for battery health monitoring. The system processes time-series battery data and transforms it into structured features that represent battery behavior over different operational cycles.
+
+The study uses the NASA lithium-ion battery dataset for training and evaluation. Data preprocessing techniques such as timestamp alignment, missing value handling, and sliding window segmentation are applied to prepare the dataset for analysis. Statistical and electrochemical features are extracted from the processed data and used as inputs for the machine learning model.
+
+The proposed system integrates classical feature engineering with quantum feature mapping and QSVM classification. The model predicts different battery risk levels, ranging from normal operation to critical degradation conditions.
+
+\section{Motivation}
+
+Battery safety is a critical requirement for the widespread adoption of electric vehicles. Failures caused by battery degradation can lead to costly damage and serious safety risks. Detecting early signs of battery deterioration allows preventive actions to be taken before critical failures occur.
+
+Advances in machine learning provide powerful tools for analyzing large volumes of sensor data generated by battery systems. At the same time, quantum computing research has introduced new approaches that can potentially improve machine learning models by enabling richer feature representations.
+
+The motivation behind this project is to explore the integration of quantum machine learning techniques with classical data analysis methods for battery monitoring applications.
+
+\section{Outline of the Thesis}
+
+The remainder of this thesis is organized as follows:
+
+\begin{enumerate}
+\item Chapter 2 presents the literature review related to quantum machine learning and battery anomaly detection.
+
+\item Chapter 3 describes the system design and architecture of the proposed QSVM-based battery monitoring framework.
+
+\item Chapter 4 explains the implementation details, dataset preparation process, and experimental results.
+
+\item Chapter 5 concludes the study and discusses future research directions.
+\end{enumerate}

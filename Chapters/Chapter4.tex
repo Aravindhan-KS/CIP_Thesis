@@ -245,7 +245,11 @@ K(x_i,x_j)=|\langle\psi(x_i)|\psi(x_j)\rangle|^2
 The resulting quantum kernel matrix is used by a classical SVM classifier to separate battery risk categories.
 
 The hybrid quantum-classical framework successfully identified degradation patterns within the battery dataset. The quantum feature transformation improved the separability of battery health states in the feature space.
-%to fix graph
+
+\subsection{Risk Assessment}
+The risk assessment results illustrate the distribution of batteries across different predicted risk categories obtained from the QSVM model. The risk distribution graph highlights the number of samples classified into each risk level, providing an overview of the model’s prediction outcomes. The prediction confidence plot further shows the confidence scores associated with each predicted class, indicating the reliability of the model’s classification results.
+
+% 2 above graphs to be there - below 2 graphs tto be removed
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{Figures/5.jpeg}
@@ -299,7 +303,7 @@ VAR = \frac{Var(Q(x))}{Var(x)}
 
 where $x$ represents the classical feature vector and $Q(x)$ represents the quantum-transformed feature vector.
 
-%to fix graph
+%to fix graph to all performance metrics and confusion matrix - values also fine
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{Figures/6.jpeg}
