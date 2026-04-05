@@ -249,15 +249,21 @@ The hybrid quantum-classical framework successfully identified degradation patte
 \subsection{Risk Assessment}
 The risk assessment results illustrate the distribution of batteries across different predicted risk categories obtained from the QSVM model. The risk distribution graph highlights the number of samples classified into each risk level, providing an overview of the model’s prediction outcomes. The prediction confidence plot further shows the confidence scores associated with each predicted class, indicating the reliability of the model’s classification results.
 
-% 2 above graphs to be there - below 2 graphs tto be removed
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{Figures/5.jpeg}
-\caption{Predicted Risk Distribution, Prediction Confidence and Battery Accuracy Analysis}
-\label{fig:prediction_results}
+\includegraphics[width=\textwidth]{Figures/risk.jpg}
+\caption{Predicted Risk Distribution Analysis}
+\label{fig:prediction_risk}
 \end{figure}
 
-The predicted risk distribution and confidence levels obtained from the QSVM model are shown in Figure~\ref{fig:prediction_results}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figures/prediction-confidence.jpg}
+\caption{Prediction Confidence Distribution Analysis}
+\label{fig:prediction_confidence}
+\end{figure}
+
+The predicted risk distribution and confidence levels obtained from the QSVM model are shown in Figure~\ref{fig:prediction_risk} and Figure~\ref{fig:prediction_confidence}, respectively.
 
 \section{Performance Metrics}
 
@@ -303,11 +309,12 @@ VAR = \frac{Var(Q(x))}{Var(x)}
 
 where $x$ represents the classical feature vector and $Q(x)$ represents the quantum-transformed feature vector.
 
-%to fix graph to all performance metrics and confusion matrix - values also fine
+%to do performance metrics table
+
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{Figures/6.jpeg}
-\caption{Confusion Matrix and Per-Class F1 Score of the QSVM Model}
+\includegraphics[width=\textwidth]{Figures/confusion-matrix.jpg}
+\caption{Confusion Matrix of the QSVM Model}
 \label{fig:confusion_matrix}
 \end{figure}
 
